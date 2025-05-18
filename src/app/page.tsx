@@ -12,7 +12,7 @@ import { v4 as uuidv4 } from 'uuid'; // Ensure uuid is installed or use Math.ran
 export default function ChatPage() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [conversationTitle, setConversationTitle] = useState('New Conversation');
+  const [conversationTitle, setConversationTitle] = useState('MSME Scheme Inquiry');
   const { toast } = useToast();
 
   // Simulate initial greeting message from AI
@@ -20,7 +20,7 @@ export default function ChatPage() {
     setMessages([
       {
         id: uuidv4(),
-        content: "Hello! I'm Chai, your friendly assistant. How can I help you today?",
+        content: "Welcome to the MSME Scheme Assistant! I can provide information on various government schemes for Micro, Small, and Medium Enterprises. How can I assist you today?",
         sender: 'ai',
         timestamp: new Date(),
       },
@@ -41,7 +41,7 @@ export default function ChatPage() {
     const thinkingMessageId = uuidv4();
     const thinkingMessage: Message = {
       id: thinkingMessageId,
-      content: "AI is thinking...",
+      content: "Finding relevant schemes...",
       sender: 'ai',
       timestamp: new Date(),
       isThinking: true,
@@ -52,13 +52,13 @@ export default function ChatPage() {
     try {
       // In a real app, this would be an API call to your LLM
       await new Promise(resolve => setTimeout(resolve, 1500 + Math.random() * 1000));
-      const aiResponseContent = `This is a simulated AI response to: "${content}". I can help with various topics. For example, try asking about *markdown support* or **bold text**.
+      const aiResponseContent = `Based on your query about "${content}", here's some general information. For example, you could ask about:
       
-You can also try lists:
-- Item 1
-- Item 2
+- Eligibility criteria for the *Prime Minister's Employment Generation Programme (PMEGP)*.
+- Details on the **Credit Guarantee Scheme (CGS)** for micro and small enterprises.
+- Information on schemes for specific sectors like **textiles** or **food processing**.
 
-Or even \`inline code\`.
+Please specify if you'd like more details on a particular scheme or aspect.
       `;
       
       const aiResponseMessage: Message = {
@@ -101,8 +101,8 @@ Or even \`inline code\`.
       if (result.shouldUpdateTitle && result.title) {
         setConversationTitle(result.title);
         toast({
-          title: 'Conversation Title Updated',
-          description: `New title: "${result.title}"`,
+          title: 'Topic Identified',
+          description: `Focusing on: "${result.title}"`,
         });
       }
     } catch (error) {

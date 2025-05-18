@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Chai Time',
-  description: 'A calm and modern chat experience.',
+  title: 'MSME Scheme Assistant',
+  description: 'Your guide to Micro, Small, and Medium Enterprise schemes.',
 };
 
 // This component will be client-side to manage conversation title

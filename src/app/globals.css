@@ -11,30 +11,30 @@ body {
     --background: 0 0% 96.1%; /* #F5F5F5 Very light gray */
     --foreground: 240 10% 3.9%; /* Standard dark text */
 
-    --card: 240 67% 97%; /* #E6E6FA Soft lavender */
+    --card: 220 25% 95%; /* #EDF0F7 Very light, slightly bluish gray for AI bubble */
     --card-foreground: 240 10% 3.9%;
 
-    --popover: 240 67% 97%; /* Soft lavender */
+    --popover: 220 25% 97%; /* Lighter bluish gray for popovers */
     --popover-foreground: 240 10% 3.9%;
 
-    --primary: 282 65% 50%; /* #9400D3 Muted violet (adjusted) */
+    --primary: 217 80% 55%; /* #5994EE Professional Blue */
     --primary-foreground: 0 0% 98%; /* Light text for on-primary */
 
-    --secondary: 240 40% 94%; /* Lighter/muted lavender */
+    --secondary: 210 40% 94%; /* Lighter/muted blue-gray */
     --secondary-foreground: 240 10% 3.9%;
 
-    --muted: 240 20% 95%; /* Subtle gray, close to background */
+    --muted: 210 20% 95%; /* Subtle gray, close to background */
     --muted-foreground: 240 5% 45%; /* Lighter text for muted contexts */
 
-    --accent: 282 65% 90%; /* Lighter version of primary for hovers/accents */
-    --accent-foreground: 282 65% 25%; /* Darker text for on-accent */
+    --accent: 217 80% 90%; /* #D6E4FB Lighter version of primary for hovers/accents */
+    --accent-foreground: 217 80% 25%; /* #2A5AA8 Darker text for on-accent */
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 240 30% 90%; /* Softer border */
+    --border: 210 30% 90%; /* Softer border */
     --input: 0 0% 100%; /* White input background */
-    --ring: 282 65% 55%; /* Primary color for focus rings */
+    --ring: 217 80% 60%; /* Primary color for focus rings */
 
     --chart-1: 12 76% 61%;
     --chart-2: 173 58% 39%;
@@ -58,30 +58,30 @@ body {
     --background: 240 10% 10%;
     --foreground: 0 0% 98%;
 
-    --card: 282 20% 18%; /* Darker muted violet for AI bubble */
+    --card: 220 15% 20%; /* #2B303B Darker, slightly bluish gray for AI bubble */
     --card-foreground: 0 0% 98%;
 
-    --popover: 282 15% 18%;
+    --popover: 220 15% 18%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 282 70% 65%; /* Lighter violet for user bubble */
-    --primary-foreground: 282 70% 15%; /* Darker text for contrast */
+    --primary: 217 70% 65%; /* #7DAAF2 Lighter blue for user bubble */
+    --primary-foreground: 217 70% 15%; /* #1B3C6F Darker text for contrast */
 
-    --secondary: 282 15% 25%;
+    --secondary: 210 15% 25%;
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 282 10% 22%;
+    --muted: 210 10% 22%;
     --muted-foreground: 0 0% 60%;
 
-    --accent: 282 70% 30%; /* Darker accent */
+    --accent: 217 70% 30%; /* #264F8C Darker accent */
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 282 15% 28%;
-    --input: 282 10% 15%; /* Dark input background */
-    --ring: 282 70% 70%;
+    --border: 210 15% 28%;
+    --input: 210 10% 15%; /* Dark input background */
+    --ring: 217 70% 70%;
     
     --chart-1: 220 70% 50%;
     --chart-2: 160 60% 45%;
