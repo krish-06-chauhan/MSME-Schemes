@@ -87,8 +87,75 @@ export default {
   		animation: {
   			'accordion-down': 'accordion-down 0.2s ease-out',
   			'accordion-up': 'accordion-up 0.2s ease-out'
-  		}
+  		},
+      typography: ({ theme }: { theme: any }) => ({
+        DEFAULT: {
+          css: {
+            color: theme('colors.foreground / 1'), // Ensures text color inherits from foreground
+            a: {
+              color: theme('colors.primary.DEFAULT / 1'),
+              '&:hover': {
+                color: theme('colors.primary.DEFAULT / 0.8'),
+              },
+            },
+            strong: {
+              color: 'inherit',
+            },
+            code: {
+              color: theme('colors.accent.foreground / 1'),
+              backgroundColor: theme('colors.accent.DEFAULT / 0.1'),
+              padding: '0.2em 0.4em',
+              borderRadius: theme('borderRadius.sm'),
+            },
+            pre: {
+              backgroundColor: theme('colors.muted.DEFAULT / 1'),
+              color: theme('colors.muted.foreground / 1'),
+            },
+            // Add more styles for other markdown elements as needed
+          },
+        },
+        sm: { // Smaller prose for chat bubbles
+          css: {
+            fontSize: theme('fontSize.sm'),
+            p: {
+              marginTop: theme('spacing.2'),
+              marginBottom: theme('spacing.2'),
+            },
+            ul: {
+              marginTop: theme('spacing.2'),
+              marginBottom: theme('spacing.2'),
+            },
+            ol: {
+              marginTop: theme('spacing.2'),
+              marginBottom: theme('spacing.2'),
+            },
+            // etc.
+          }
+        },
+        invert: { // For dark mode
+           css: {
+            color: theme('colors.foreground / 1'), // Ensure this works for dark mode foreground
+            a: {
+              color: theme('colors.primary.DEFAULT / 1'),
+              '&:hover': {
+                color: theme('colors.primary.DEFAULT / 0.8'),
+              },
+            },
+            code: {
+              color: theme('colors.accent.foreground / 1'), // Check if accent works well in dark
+              backgroundColor: theme('colors.accent.DEFAULT / 0.2'), // Darker accent bg
+            },
+             pre: {
+              backgroundColor: theme('colors.muted.DEFAULT / 1'), // Check if muted works well
+              color: theme('colors.muted.foreground / 1'),
+            },
+          }
+        }
+      }),
   	}
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    require('@tailwindcss/typography'),
+  ],
 } satisfies Config;
